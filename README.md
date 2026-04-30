@@ -4,6 +4,15 @@
 
 Projeto desenhado para representar **arquitetura real de mercado**, pronto para evolução em ambientes corporativos, implementações técnicas de a nível de estudos para Engineer**, portfólio GitHub e estudo avançado de sistemas distribuídos.
 
+
+Autor: Do ponto vista como desenvolvedor definir uma arquitetura de microservices, quase sempre uma tarefa complexa,
+não fácil, visto que lidar com a complexidade e o grande volume de dados é as vezes caótico, e criar soluções
+orientadas a eventos as vezes pode nos guiar a ganhos significativos.  
+Pensando nisso desenvolvi uma pequena plataforma enterprise orientada a eventos com microsserviços Java + Spring Boot + Kafka.
+Estruturei cada serviço em Clean Architecture.
+Implementei um Agent Service com RAG para conhecimento corporativo e MCP para execução de ferramentas internas. Este
+projeto foi criado para estudo avançado de arquitetura moderna e IA aplicada a sistemas corporativos.
+
 ---
 
 # Sumário
@@ -97,7 +106,7 @@ Este projeto foi criado para demonstrar domínio em:
  PostgreSQL | MongoDB | Redis | Vector DB
 ──────────────────────────────────────────────────────────
 
-Stack Tecnológica
+## Stack Tecnológica
 Backend
 Java 21
 Spring Boot 3
@@ -128,7 +137,7 @@ Grafana
 Conceitos Arquiteturais
 Microsserviços
 
-Cada domínio possui autonomia:
+## Cada domínio possui autonomia:
 
 Banco isolado
 Deploy independente
@@ -136,14 +145,14 @@ Escalabilidade separada
 Responsabilidade única
 Clean Architecture
 
-Separação rígida entre:
+## Separação rígida entre:
 
 domain
 application
 infrastructure
 adapters
 
-Benefícios:
+## Benefícios:
 
 Baixo acoplamento
 Testabilidade alta
@@ -151,7 +160,7 @@ Regra de negócio independente de framework
 Evolução sustentável
 Event-Driven
 
-Integrações assíncronas usando Kafka:
+## Integrações assíncronas usando Kafka:
 
 order-created
 payment-approved
@@ -165,14 +174,16 @@ Busca conhecimento corporativo em tempo real.
 
 MCP
 
-Permite que a IA execute ferramentas internas:
+## Permite que a IA execute ferramentas internas:
 
 consultar estoque
 gerar relatório
 enviar e-mail
 consultar pedidos
 criar refund
-Estrutura do Monorepo
+
+## Estrutura do Monorepo
+
 ai-commerce-enterprise/
 │
 ├── pom.xml
@@ -196,7 +207,9 @@ ai-commerce-enterprise/
 │   ├── notification-service/
 │   ├── agent-service/
 │   └── rag-indexer-service/
-Estrutura Interna de Cada Serviço
+
+## Estrutura Interna de Cada Serviço
+
 product-service/
 └── src/main/java/com/aicommerce/product
     ├── domain/
@@ -216,6 +229,7 @@ product-service/
     │   └── controller/
     │
     └── ProductApplication.java
+
 Microsserviços
 product-service
 
@@ -378,9 +392,11 @@ Java 21
 Maven 3.9+
 Rodar tudo
 docker compose up --build
+
 Rodar individual
 mvn clean install
 mvn spring-boot:run
+
 Endpoints Iniciais
 Produto
 POST /products
@@ -394,12 +410,15 @@ POST /agent/ask
 
 Body:
 
+```
 {
   "question": "Qual estoque do NB001?"
 }
+```
+
 Segurança
 
-Roadmap:
+## Roadmap:
 
 JWT
 OAuth2
@@ -409,7 +428,7 @@ Tool Allowlist
 Prompt Injection Defense
 Observabilidade
 
-Roadmap:
+## Roadmap:
 
 Spring Actuator
 Prometheus
@@ -418,7 +437,7 @@ OpenTelemetry
 Distributed Tracing
 CI/CD
 
-GitHub Actions:
+## GitHub Actions:
 
 Build Maven
 Testes
@@ -426,21 +445,25 @@ SonarQube
 Docker Build
 Deploy Kubernetes
 Roadmap Evolutivo
-Fase 1
+
+## Fase 1
 product-service
 inventory-service
 Kafka
 Docker
-Fase 2
+
+## Fase 2
 order-service
 payment-service
 saga
-Fase 3
+
+## Fase 3
 agent-service
 MCP tools
 Fase 4
 RAG real com pgvector
-Fase 5
+
+## Fase 5
 Kubernetes
 Observabilidade
 CI/CD
@@ -462,10 +485,3 @@ Terraform
 OpenAI Integration
 Multi-agent orchestration
 
-Autor: Do ponto vista como desenvolvedor definir uma arquitetura de microservices, quase sempre uma tarefa complexa,
-não fácil, visto que lidar com a complexidade e o grande volume de dados é as vezes caótico, e criar soluções
-orientadas a eventos as vezes pode nos guiar a ganhos significativos.  
-Pensando nisso desenvolvi uma pequena plataforma enterprise orientada a eventos com microsserviços Java + Spring Boot + Kafka.
-Estruturei cada serviço em Clean Architecture.
-Implementei um Agent Service com RAG para conhecimento corporativo e MCP para execução de ferramentas internas. Este 
-projeto foi criado para estudo avançado de arquitetura moderna e IA aplicada a sistemas corporativos.
