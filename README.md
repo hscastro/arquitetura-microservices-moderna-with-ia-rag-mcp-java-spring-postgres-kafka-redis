@@ -108,7 +108,6 @@ Este projeto foi criado para demonstrar domínio em:
 
 ```
 
----
 ## Stack Tecnológica
 Backend
 Java 21
@@ -140,7 +139,6 @@ Grafana
 Conceitos Arquiteturais
 Microsserviços
 
----
 
 ## Cada domínio possui autonomia:
 
@@ -187,9 +185,10 @@ enviar e-mail
 consultar pedidos
 criar refund
 
----
+
 ## Estrutura do Monorepo
 
+```text
 ai-commerce-enterprise/
 │
 ├── pom.xml
@@ -214,7 +213,7 @@ ai-commerce-enterprise/
 │   ├── agent-service/
 │   └── rag-indexer-service/
 
-## Estrutura Interna de Cada Serviço
+Estrutura Interna de Cada Serviço
 
 product-service/
 └── src/main/java/com/aicommerce/product
@@ -235,6 +234,7 @@ product-service/
     │   └── controller/
     │
     └── ProductApplication.java
+```
 
 Microsserviços
 product-service
@@ -318,6 +318,8 @@ Atualizar base vetorial
 Indexar catálogo
 Fluxos de Negócio
 Compra
+
+```text
 POST /orders
 ↓
 order-created
@@ -331,12 +333,15 @@ payment-approved
 notification sends email
 Pergunta IA
 
+```
+
 Usuário:
 
 Posso vender 200 notebooks amanhã?
 
 Fluxo:
 
+```text
 agent-service
 ↓
 MCP consulta estoque
@@ -348,6 +353,8 @@ Kafka verifica reservas
 IA responde
 RAG (Retrieval-Augmented Generation)
 
+```
+
 Base documental:
 
 FAQ
@@ -358,6 +365,7 @@ Playbooks internos
 
 Pipeline:
 
+```text
 Documento
 ↓
 Chunking
@@ -370,6 +378,8 @@ Similarity Search
 ↓
 LLM
 MCP (Model Context Protocol)
+
+```
 
 Ferramentas disponíveis:
 
@@ -413,7 +423,6 @@ Pedido
 POST /orders
 Agent IA
 POST /agent/ask
----
 
 Body:
 ```
@@ -422,7 +431,6 @@ Body:
 }
 ```
 
----
 Segurança
 
 ## Roadmap:
@@ -491,4 +499,4 @@ Kubernetes
 Terraform
 OpenAI Integration
 Multi-agent orchestration
----
+
