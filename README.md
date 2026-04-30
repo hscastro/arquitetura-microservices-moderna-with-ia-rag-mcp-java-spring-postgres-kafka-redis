@@ -105,10 +105,10 @@ Este projeto foi criado para demonstrar domínio em:
 ──────────────────────────────────────────────────────────
  PostgreSQL | MongoDB | Redis | Vector DB
 ──────────────────────────────────────────────────────────
-
 ```
 
-## Stack Tecnológica
+
+Stack Tecnológica
 Backend
 Java 21
 Spring Boot 3
