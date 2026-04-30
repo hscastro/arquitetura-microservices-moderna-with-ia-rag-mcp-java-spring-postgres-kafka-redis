@@ -106,6 +106,9 @@ Este projeto foi criado para demonstrar domínio em:
  PostgreSQL | MongoDB | Redis | Vector DB
 ──────────────────────────────────────────────────────────
 
+```
+
+---
 ## Stack Tecnológica
 Backend
 Java 21
@@ -136,6 +139,8 @@ Prometheus
 Grafana
 Conceitos Arquiteturais
 Microsserviços
+
+---
 
 ## Cada domínio possui autonomia:
 
@@ -182,6 +187,7 @@ enviar e-mail
 consultar pedidos
 criar refund
 
+---
 ## Estrutura do Monorepo
 
 ai-commerce-enterprise/
@@ -407,15 +413,16 @@ Pedido
 POST /orders
 Agent IA
 POST /agent/ask
+---
 
 Body:
-
 ```
 {
   "question": "Qual estoque do NB001?"
 }
 ```
 
+---
 Segurança
 
 ## Roadmap:
@@ -484,4 +491,4 @@ Kubernetes
 Terraform
 OpenAI Integration
 Multi-agent orchestration
-
+---
