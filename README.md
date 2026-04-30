@@ -2,7 +2,7 @@
 
 > Plataforma enterprise moderna baseada em **Microsserviços + Event-Driven + IA Corporativa**, construída com **Java + Spring Boot + Apache Kafka + Clean Architecture + RAG + MCP**.
 
-Projeto desenhado para representar **arquitetura real de mercado**, pronto para evolução em ambientes corporativos, entrevistas técnicas de nível **Senior / Staff Engineer**, portfólio GitHub e estudo avançado de sistemas distribuídos.
+Projeto desenhado para representar **arquitetura real de mercado**, pronto para evolução em ambientes corporativos, implementações técnicas de a nível de estudos para Engineer**, portfólio GitHub e estudo avançado de sistemas distribuídos.
 
 ---
 
