@@ -4,14 +4,18 @@
 
 Projeto desenhado para representar **arquitetura real de mercado**, pronto para evolução em ambientes corporativos, implementações técnicas de a nível de estudos para Engineer**, portfólio GitHub e estudo avançado de sistemas distribuídos.
 
+Do ponto de vista de um desenvolvedor, definir uma arquitetura de microsserviços é quase sempre uma tarefa complexa — não é fácil. 
+Lidar com a complexidade e com grandes volumes de dados pode ser, muitas vezes, caótico. Nesse cenário, a adoção 
+de soluções orientadas a eventos pode nos conduzir a ganhos significativos.
 
-Autor: Do ponto vista como desenvolvedor definir uma arquitetura de microservices, quase sempre uma tarefa complexa,
-não fácil, visto que lidar com a complexidade e o grande volume de dados é as vezes caótico, e criar soluções
-orientadas a eventos as vezes pode nos guiar a ganhos significativos.  
-Pensando nisso desenvolvi uma pequena plataforma enterprise orientada a eventos com microsserviços Java + Spring Boot + Kafka.
-Estruturei cada serviço em Clean Architecture.
-Implementei um Agent Service com RAG para conhecimento corporativo e MCP para execução de ferramentas internas. Este
-projeto foi criado para estudo avançado de arquitetura moderna e IA aplicada a sistemas corporativos.
+Pensando nisso, estou desenvolvendo uma pequena plataforma enterprise orientada a eventos, utilizando microsserviços 
+com Java + Spring Boot + Apache Kafka. Estruturei cada serviço seguindo os princípios da Clean Architecture.
+
+Além disso, irá ter a implementação de um Agent Service com RAG (Retrieval-Augmented Generation) para gestão de conhecimento 
+corporativo e MCP para execução de ferramentas internas.
+
+Este projeto está sendo pensado com o objetivo de aprofundar estudos em arquitetura moderna e na aplicação de IA em 
+sistemas corporativos, por esse motivo aceito dicas e sugestações...
 
 ---
 
