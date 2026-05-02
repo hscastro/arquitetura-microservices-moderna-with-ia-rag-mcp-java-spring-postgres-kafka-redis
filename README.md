@@ -9,19 +9,20 @@ Lidar com a complexidade e com grandes volumes de dados pode ser, muitas vezes, 
 de soluções orientadas a eventos pode nos conduzir a ganhos significativos.
 
 Pensando nisso, estou desenvolvendo uma pequena plataforma enterprise orientada a eventos, utilizando microsserviços 
-com Java + Spring Boot + Apache Kafka. Estruturei cada serviço seguindo os princípios da Clean Architecture.
+com Java + Spring Boot + Apache Kafka. Cada serviço será estruturdo seguindo os princípios da 
+Clean Architecture.
 
 Além disso, irá ter a implementação de um Agent Service com RAG (Retrieval-Augmented Generation) para gestão de conhecimento 
 corporativo e MCP para execução de ferramentas internas.
 
 Este projeto está sendo pensado com o objetivo de aprofundar estudos em arquitetura moderna e na aplicação de IA em 
-sistemas corporativos, por esse motivo aceito dicas e sugestações...
+sistemas corporativos, por esse motivo estou aberto e aceito dicas e sugestões.
 
 ---
 
 # Sumário
 
-- Visão Geral
+- Visão Geral 
 - Objetivos do Projeto
 - Arquitetura Geral
 - Stack Tecnológica
@@ -241,8 +242,8 @@ product-service/
 ```
 
 Microsserviços
-product-service
 
+##--- product-service
 Responsável por:
 
 Cadastro de produtos
@@ -254,8 +255,8 @@ Publica eventos:
 
 product-created
 product-updated
-inventory-service
 
+##--- inventory-service
 Responsável por:
 
 Estoque disponível
@@ -266,8 +267,8 @@ Consome:
 
 product-created
 order-created
-order-service
 
+##--- order-service
 Responsável por:
 
 Criação de pedidos
@@ -277,8 +278,8 @@ Orquestração da compra
 Publica:
 
 order-created
-payment-service
 
+##--- payment-service
 Responsável por:
 
 Aprovação de pagamento
@@ -290,8 +291,8 @@ Publica:
 payment-approved
 payment-failed
 refund-created
-notification-service
 
+##--- notification-service
 Responsável por:
 
 E-mail
@@ -301,10 +302,9 @@ Push
 
 Consome eventos de negócio.
 
-agent-service
 
+##--- agent-service
 Coração de IA do sistema.
-
 Responsável por:
 
 Interpretar perguntas
@@ -312,8 +312,8 @@ Escolher tool MCP
 Buscar contexto RAG
 Responder usuário
 Executar automações
-rag-indexer-service
 
+##--- rag-indexer-service
 Responsável por:
 
 Processar documentos
@@ -403,7 +403,9 @@ MongoDB
 Redis
 Kafka
 Zookeeper
+
 Microsserviços
+
 Como Executar
 Pré-requisitos
 Docker
