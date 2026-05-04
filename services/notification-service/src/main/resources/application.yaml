@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: notification-service
+
+  server:
+    port: 8085
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${DB_HOST:localhost}:${ports:5435}/${POSTGRES_DB:notification_db}
+    username: ${POSTGRES_USER:postgres}
+    password: ${POSTGRES_PASSWORD:1234567}
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      database-platform=org:
+        hibernate:
+          dialect:
+            PostgreSQLDialect:
+
